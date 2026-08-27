@@ -541,7 +541,7 @@ body {
 
 .feature-card p {
     color: var(--dark-text);
-    opacity: 0.85;
+    opacity: 1;
 }
 
 /* ==================== PROGRAMS SECTION ==================== */
