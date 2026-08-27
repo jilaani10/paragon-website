@@ -149,42 +149,11 @@ function initializeScrollEffects() {
 // ==================== ANIMATION MODULE ==================== 
 
 function initializeScrollAnimations() {
-    const observerOptions = AnimationConfig.observerOptions;
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
-                observer.unobserve(entry.target); // Only animate once
-            }
-        });
-    }, observerOptions);
-
-    // Observe all animatable elements
-    const animatableElements = [
-        ...DOM.featureCards,
-        ...DOM.programCards,
-        ...DOM.specialCards,
-        ...DOM.testimonialCards,
-        ...DOM.newsCards,
-        ...DOM.galleryItems,
-        ...DOM.timelineItems
-    ];
-
-    animatableElements.forEach((element, index) => {
-        element.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-        observer.observe(element);
-    });
+    // Cards are always visible - no animation needed
 }
 
 function animatePageLoad() {
-    // Add fade-in animation to body
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease';
-    
-    requestAnimationFrame(() => {
-        document.body.style.opacity = '1';
-    });
+    // Page loads immediately - no animation
 }
 
 function initializeButtonAnimations() {
@@ -222,7 +191,7 @@ function initializeButtonAnimations() {
     });
 }
 
-// Add ripple animation keyframes
+// Ripple animation keyframes
 const style = document.createElement('style');
 style.textContent = `
     @keyframes ripple {
@@ -230,10 +199,6 @@ style.textContent = `
             transform: scale(4);
             opacity: 0;
         }
-    }
-    .animate-in {
-        opacity: 1 !important;
-        transform: translateY(0) !important;
     }
 `;
 document.head.appendChild(style);
