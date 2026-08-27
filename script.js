@@ -172,9 +172,6 @@ function initializeScrollAnimations() {
     ];
 
     animatableElements.forEach((element, index) => {
-        // Add initial styles
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(30px)';
         element.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
         observer.observe(element);
     });

@@ -470,6 +470,8 @@ body {
     border: 1px solid var(--sand-dark);
     position: relative;
     overflow: hidden;
+    opacity: 1;
+    visibility: visible;
 }
 
 .feature-card::before {
