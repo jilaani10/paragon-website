@@ -533,6 +533,9 @@ body {
     margin-bottom: var(--spacing-sm);
     color: var(--primary-blue);
     transition: var(--transition);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
 }
 
 .feature-card:hover h3 {
@@ -542,6 +545,9 @@ body {
 .feature-card p {
     color: var(--dark-text);
     opacity: 1;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
 }
 
 /* ==================== PROGRAMS SECTION ==================== */
