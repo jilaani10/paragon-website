@@ -582,6 +582,8 @@ body {
 .text-center {
     text-align: center;
     margin-top: var(--spacing-md);
+    display: flex;
+    justify-content: center;
 }
 
 .program-card {
