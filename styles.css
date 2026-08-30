@@ -1213,8 +1213,18 @@ body {
 }
 
 .contact-form h3 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     color: var(--primary-blue);
+}
+
+.form-note {
+    font-size: 0.95rem;
+    color: var(--dark-text);
+    margin-bottom: 1.5rem;
+    padding: 0.6rem 1rem;
+    background: var(--sand);
+    border-left: 4px solid var(--muted-teal);
+    border-radius: 8px;
 }
 
 .form-group {
