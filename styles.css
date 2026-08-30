@@ -942,24 +942,17 @@ body {
 }
 
 .gallery-grid-centered {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 420px));
     justify-content: center;
     gap: 1.5rem;
     margin: 0 auto;
 }
 
-.gallery-grid-centered .gallery-item {
-    flex: 0 0 420px;
-    max-width: 100%;
-}
-
 @media (max-width: 767px) {
     .gallery-grid-centered {
+        grid-template-columns: 1fr;
         gap: 1rem;
-    }
-    .gallery-grid-centered .gallery-item {
-        flex: 0 0 100%;
     }
 }
 
