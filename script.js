@@ -214,18 +214,36 @@ function initializeContactForm() {
 function handleContactSubmit(e) {
     e.preventDefault();
     
-    const formData = {
-        name: this.querySelector('input[type="text"]')?.value || '',
-        email: this.querySelector('input[type="email"]')?.value || '',
-        message: this.querySelector('textarea')?.value || ''
-    };
+    const form = this;
+    const formData = new FormData(form);
+    const data = {};
+    formData.forEach((value, key) => { data[key] = value; });
 
-    if (formData.name && formData.email && formData.message) {
-        showNotification('Thank you for your message! We will get back to you soon.', 'success');
-        this.reset();
-    } else {
+    if (!data.name || !data.email || !data.message) {
         showNotification('Please fill in all required fields.', 'error');
+        return;
     }
+
+    fetch('https://formsubmit.co/ajax/paragoneducomplex14@gmail.com', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(result => {
+        if (result.success) {
+            showNotification('Thank you! Your message has been sent. We will get back to you soon.', 'success');
+            form.reset();
+        } else {
+            showNotification('Sorry, something went wrong. Please try again.', 'error');
+        }
+    })
+    .catch(() => {
+        showNotification('Network error. Please check your connection and try again.', 'error');
+    });
 }
 
 function initializePortalLogin() {

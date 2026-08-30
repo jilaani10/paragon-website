@@ -57,28 +57,31 @@
             <div class="contact-grid">
                 <div class="contact-form">
                     <h3>Send us a Message</h3>
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://formsubmit.co/ajax/paragoneducomplex14@gmail.com" method="post">
+                        <input type="hidden" name="_subject" value="New Message - Paragon Educational Complex Website">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Phone Number">
+                            <input type="tel" name="phone" placeholder="Phone Number">
                         </div>
                         <div class="form-group">
-                            <select>
+                            <select name="inquiry">
                                 <option value="">Select Inquiry Type</option>
-                                <option value="admissions">Admissions</option>
-                                <option value="programs">Programs</option>
-                                <option value="tour">Campus Tour</option>
-                                <option value="fees">Fee Information</option>
-                                <option value="other">Other</option>
+                                <option value="Admissions">Admissions</option>
+                                <option value="Programs">Programs</option>
+                                <option value="Campus Tour">Campus Tour</option>
+                                <option value="Fee Information">Fee Information</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
