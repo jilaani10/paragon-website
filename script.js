@@ -216,29 +216,26 @@ function handleContactSubmit(e) {
     
     const form = this;
     const formData = new FormData(form);
-    const data = {};
-    formData.forEach((value, key) => { data[key] = value; });
 
-    if (!data.name || !data.email || !data.message) {
+    if (!formData.get('name') || !formData.get('email') || !formData.get('message')) {
         showNotification('Please fill in all required fields.', 'error');
         return;
     }
 
-    fetch('https://formsubmit.co/ajax/paragoneducomplex14@gmail.com', {
+    fetch('https://formspree.io/f/xjkprjow', {
         method: 'POST',
+        body: formData,
         headers: {
-            'Content-Type': 'application/json',
             'Accept': 'application/json'
-        },
-        body: JSON.stringify(data)
+        }
     })
     .then(res => res.json())
     .then(result => {
-        if (result.success === 'true' || result.success === true) {
+        if (result.ok) {
             showNotification('Thank you! Your message has been sent. We will get back to you soon.', 'success');
             form.reset();
         } else {
-            showNotification('Message not sent: ' + (result.message || 'unknown response. Please try again.'), 'error');
+            showNotification('Message not sent: ' + (result.errors?.[0]?.message || 'unknown response. Please try again.'), 'error');
         }
     })
     .catch(() => {
