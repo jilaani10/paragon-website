@@ -234,11 +234,11 @@ function handleContactSubmit(e) {
     })
     .then(res => res.json())
     .then(result => {
-        if (result.success) {
+        if (result.success === 'true' || result.success === true) {
             showNotification('Thank you! Your message has been sent. We will get back to you soon.', 'success');
             form.reset();
         } else {
-            showNotification('Sorry, something went wrong. Please try again.', 'error');
+            showNotification('Message not sent: ' + (result.message || 'unknown response. Please try again.'), 'error');
         }
     })
     .catch(() => {
