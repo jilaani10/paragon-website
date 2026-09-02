@@ -418,14 +418,15 @@ body {
 .hero-image {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: var(--spacing-sm);
     animation: fadeInUp 1s ease-out 0.3s backwards;
 }
 
 .hero-img {
     width: 100%;
-    max-width: 800px;
-    height: 460px;
+    max-width: 900px;
+    height: 560px;
     object-fit: cover;
     object-position: center;
     border-radius: var(--border-radius-lg);
@@ -2136,7 +2137,6 @@ body {
    sizes, so pictures look the same on phones, tablets, PCs and TVs.
    The full picture is never cropped or cut off. */
 
-.hero-img,
 .feature-img,
 .program-img,
 .news-img,
@@ -2158,6 +2158,40 @@ body {
 .bece-result-item {
     height: auto !important;
     min-height: 0 !important;
+}
+
+/* ==================== MAIN PAGE HERO IMAGE ====================
+   The home page hero image is shown LARGE while keeping its original
+   framed card look. It fills a tall frame centered with the full
+   picture always visible (never cropped or cut off). */
+
+.hero-img {
+    height: 560px;
+    object-fit: contain;
+    object-position: center;
+    background: var(--primary-blue);
+}
+
+.hero-image {
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .hero-img {
+        height: 480px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-img {
+        height: 380px;
+    }
+}
+
+@media (max-width: 575px) {
+    .hero-img {
+        height: 300px;
+    }
 }
 
 /* High DPI Displays (Retina) Optimization */
