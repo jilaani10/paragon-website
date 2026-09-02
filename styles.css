@@ -1663,7 +1663,6 @@ body {
     
     .hero-img {
         width: 100%;
-        height: 360px;
         object-fit: cover;
         object-position: center;
     }
@@ -1778,7 +1777,6 @@ body {
     
     .hero-img {
         width: 100%;
-        height: 300px;
         object-fit: cover;
         object-position: center;
     }
@@ -1896,7 +1894,6 @@ body {
     
     .hero-img {
         width: 100%;
-        height: 260px;
         object-fit: cover;
         object-position: center;
     }
@@ -2038,7 +2035,6 @@ body {
     
     .hero-img {
         width: 100%;
-        height: 220px;
         object-fit: cover;
         object-position: center;
     }
@@ -2102,7 +2098,6 @@ body {
     
     .hero-img {
         width: 100%;
-        height: 220px;
         object-fit: cover;
         object-position: center;
     }
