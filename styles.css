@@ -426,7 +426,7 @@ body {
 .hero-img {
     width: 100%;
     max-width: 900px;
-    height: 560px;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     object-position: center;
     border-radius: var(--border-radius-lg);
@@ -2162,36 +2162,18 @@ body {
 
 /* ==================== MAIN PAGE HERO IMAGE ====================
    The home page hero image is shown LARGE while keeping its original
-   framed card look. It fills a tall frame centered with the full
-   picture always visible (never cropped or cut off). */
+   framed card look. It uses a fixed 16:9 aspect ratio so the picture
+   looks EXACTLY the same on phones, tablets, PCs and TVs — the full
+   frame is always filled edge-to-edge with no cropping or gaps. */
 
 .hero-img {
-    height: 560px;
-    object-fit: contain;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
     object-position: center;
-    background: var(--primary-blue);
 }
 
 .hero-image {
     width: 100%;
-}
-
-@media (max-width: 991px) {
-    .hero-img {
-        height: 480px;
-    }
-}
-
-@media (max-width: 767px) {
-    .hero-img {
-        height: 380px;
-    }
-}
-
-@media (max-width: 575px) {
-    .hero-img {
-        height: 300px;
-    }
 }
 
 /* High DPI Displays (Retina) Optimization */
