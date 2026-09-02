@@ -2131,4 +2131,33 @@ body {
     }
 }
 
+/* ==================== RESPONSIVE IMAGE CONSISTENCY ====================
+   Keep every image fully visible at its natural aspect ratio on ALL screen
+   sizes, so pictures look the same on phones, tablets, PCs and TVs.
+   The full picture is never cropped or cut off. */
+
+.hero-img,
+.feature-img,
+.program-img,
+.news-img,
+.gallery-img,
+.gallery-carousel-img,
+.bece-result-img,
+.image-placeholder img {
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center !important;
+}
+
+.feature-image:has(> img),
+.program-image:has(> img),
+.news-image:has(> img),
+.gallery-image:has(> img),
+.gallery-carousel:has(> img),
+.bece-result-item {
+    height: auto !important;
+    min-height: 0 !important;
+}
+
 /* High DPI Displays (Retina) Optimization */
