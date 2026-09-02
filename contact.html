@@ -58,20 +58,31 @@
                 <div class="contact-form">
                     <h3>Send us a Message</h3>
                     <p class="form-note">Messages go to <strong>paragoneducomplex14@gmail.com</strong></p>
-                    <form
-  action="https://formspree.io/f/myeyjjpq"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email" value="paragoneducomplex14@gmail.com">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <button type="submit">Send</button>
-</form>
+                    <form action="https://formspree.io/f/myeyjjpq" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <select name="inquiry">
+                                <option value="">Select Inquiry Type</option>
+                                <option value="Admissions">Admissions</option>
+                                <option value="Programs">Programs</option>
+                                <option value="Campus Tour">Campus Tour</option>
+                                <option value="Fee Information">Fee Information</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
