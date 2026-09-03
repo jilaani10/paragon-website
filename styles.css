@@ -348,12 +348,12 @@ body {
 
 .hero .container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: var(--spacing-lg);
     align-items: center;
     position: relative;
     z-index: 1;
-    text-align: center;
+    text-align: left;
 }
 
 .hero-content h1 {
@@ -400,7 +400,7 @@ body {
 .hero-buttons {
     display: flex;
     gap: var(--spacing-sm);
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     animation: fadeInUp 0.8s ease-out 0.6s backwards;
 }
