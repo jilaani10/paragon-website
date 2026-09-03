@@ -30,6 +30,10 @@
     --gradient-hero: linear-gradient(135deg, #0B6E6E 0%, #084F4F 100%);
     --gradient-accent: linear-gradient(135deg, #D4AF37 0%, #C9A24B 100%);
     
+    /* Theme-specific accents (green/teal default) */
+    --accent-text: #C9A24B;
+    --btn-active: #B8933F;
+    
     /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
@@ -44,6 +48,34 @@
     
     /* Viewport */
     --vh: 1vh;
+}
+
+/* ==================== ALTERNATE THEME - NAVY / ORANGE ==================== */
+/* Toggled monthly via data-theme attribute set in each page's <head> */
+html[data-theme="navy"] {
+    --primary-blue: #003366;
+    --primary-orange: #FF6600;
+    --primary-yellow: #FF8533;
+    --ash-gray: #4A6B8A;
+    --ash-light: #F4F6F8;
+    --sand: #F4F6F8;
+    --sand-dark: #E3E8EE;
+    --muted-teal: #4A6B8A;
+
+    --dark-text: #1F2D3D;
+    --light-text: #5A6B7A;
+
+    --shadow-sm: 0 2px 10px rgba(0,51,102,0.10);
+    --shadow-md: 0 5px 15px rgba(0,51,102,0.12);
+    --shadow-lg: 0 10px 30px rgba(0,51,102,0.16);
+    --shadow-hover: 0 15px 30px rgba(0,51,102,0.20);
+
+    --gradient-primary: linear-gradient(135deg, #003366 0%, #00284F 100%);
+    --gradient-hero: linear-gradient(135deg, #003366 0%, #002244 100%);
+    --gradient-accent: linear-gradient(135deg, #FF8533 0%, #FF6600 100%);
+
+    --accent-text: #FF8533;
+    --btn-active: #E05A00;
 }
 
 * {
@@ -117,7 +149,7 @@ body {
 }
 
 .nav-brand .school-name-arabic {
-    color: #C9A24B;
+    color: var(--accent-text);
     font-size: 14px !important;
     font-weight: 600;
     margin-top: 2px;
@@ -386,7 +418,7 @@ body {
 }
 
 .btn-primary:active {
-    background: #B8933F;
+    background: var(--btn-active);
     transform: translateY(-1px);
     box-shadow: none;
 }
