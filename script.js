@@ -956,13 +956,13 @@ function getElementSelector(element) {
     if (!img) return;
 
     const images = [
-        'images/IMG-20260902-WA0000.jpg',
+        'images/IMG-20260902-WA0006.jpg',
         'images/IMG-20260902-WA0001.jpg',
         'images/IMG-20260902-WA0002.jpg',
         'images/IMG-20260902-WA0003.jpg',
         'images/IMG-20260902-WA0004.jpg',
         'images/IMG-20260902-WA0005.jpg',
-        'images/IMG-20260902-WA0006.jpg',
+        'images/IMG-20260902-WA0000.jpg',
         'images/IMG-20260902-WA0007.jpg',
         'images/IMG-20260902-WA0008.jpg',
         'images/IMG-20260902-WA0009.jpg',
