@@ -78,6 +78,34 @@ html[data-theme="navy"] {
     --btn-active: #E05A00;
 }
 
+/* ==================== ALTERNATE THEME - ASIAN ARCHITECTURE ==================== */
+/* Red / Gold / Charcoal with cream, sage, and sky accents */
+html[data-theme="asian"] {
+    --primary-blue: #C41E3A;
+    --primary-orange: #D4AF37;
+    --primary-yellow: #E8C24A;
+    --ash-gray: #7A9B6F;
+    --ash-light: #F5F1E8;
+    --sand: #F5F1E8;
+    --sand-dark: #EAE2D0;
+    --muted-teal: #7A9B6F;
+
+    --dark-text: #1A1A1A;
+    --light-text: #4A4A4A;
+
+    --shadow-sm: 0 2px 10px rgba(196,30,58,0.12);
+    --shadow-md: 0 5px 15px rgba(26,26,26,0.15);
+    --shadow-lg: 0 10px 30px rgba(26,26,26,0.20);
+    --shadow-hover: 0 15px 30px rgba(196,30,58,0.22);
+
+    --gradient-primary: linear-gradient(135deg, #C41E3A 0%, #A0182F 100%);
+    --gradient-hero: linear-gradient(135deg, #1A1A1A 0%, #C41E3A 130%);
+    --gradient-accent: linear-gradient(135deg, #E8C24A 0%, #D4AF37 100%);
+
+    --accent-text: #E8C24A;
+    --btn-active: #A0182F;
+}
+
 * {
     margin: 0;
     padding: 0;

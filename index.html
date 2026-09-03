@@ -10,8 +10,11 @@
     <script>
         (function () {
             var month = new Date().getMonth() + 1;
-            if (month % 2 === 0) {
+            var r = month % 3;
+            if (r === 1) {
                 document.documentElement.setAttribute('data-theme', 'navy');
+            } else if (r === 2) {
+                document.documentElement.setAttribute('data-theme', 'asian');
             }
         })();
     </script>
