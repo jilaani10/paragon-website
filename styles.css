@@ -106,12 +106,14 @@ html[data-theme="asian"] {
     --btn-active: #A0182F;
 }
 
-/* Asian theme structural: feature cards get a left accent border, text left-aligned */
+/* Navy/Asian themes structural: feature cards get a left accent border, text left-aligned */
+html[data-theme="navy"] .feature-card,
 html[data-theme="asian"] .feature-card {
     text-align: left;
     border-left: 5px solid var(--primary-blue);
 }
 
+html[data-theme="navy"] .feature-card:nth-child(even),
 html[data-theme="asian"] .feature-card:nth-child(even) {
     border-left-color: var(--primary-orange);
 }
