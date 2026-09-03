@@ -327,8 +327,8 @@ body {
 
 .hero {
     padding: var(--spacing-xl) 0 var(--spacing-lg);
-    background: var(--white);
-    color: var(--dark-text);
+    background: var(--gradient-hero);
+    color: var(--white);
     margin-top: 60px;
     position: relative;
     overflow: hidden;
@@ -348,19 +348,19 @@ body {
 
 .hero .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: var(--spacing-lg);
     align-items: center;
     position: relative;
     z-index: 1;
-    text-align: left;
+    text-align: center;
 }
 
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: var(--spacing-sm);
     line-height: var(--line-height-tight);
-    color: var(--dark-text);
+    color: var(--white);
     animation: fadeInUp 0.8s ease-out;
 }
 
@@ -368,16 +368,16 @@ body {
     display: block;
     font-size: 35px;
     font-weight: 700;
-    color: var(--primary-blue);
+    color: var(--primary-yellow);
     margin-bottom: var(--spacing-sm);
     direction: rtl;
     unicode-bidi: embed;
     animation: fadeInUp 0.8s ease-out 0.15s backwards;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
 
 .school-motto {
-    color: var(--primary-blue) !important;
+    color: var(--primary-yellow) !important;
     font-weight: 700;
     letter-spacing: 0.06em;
 }
@@ -385,14 +385,14 @@ body {
 .hero-content > p:first-of-type {
     font-size: 1.5rem;
     margin-bottom: var(--spacing-sm);
-    color: var(--primary-blue);
+    color: var(--sand);
     opacity: 0.95;
     animation: fadeInUp 0.8s ease-out 0.2s backwards;
 }
 
 .hero-content > p:nth-of-type(2) {
     margin-bottom: var(--spacing-md);
-    color: var(--light-text);
+    color: var(--white);
     opacity: 0.9;
     animation: fadeInUp 0.8s ease-out 0.4s backwards;
 }
@@ -400,7 +400,7 @@ body {
 .hero-buttons {
     display: flex;
     gap: var(--spacing-sm);
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     animation: fadeInUp 0.8s ease-out 0.6s backwards;
 }
@@ -465,19 +465,19 @@ body {
 
 .btn-secondary {
     background: transparent;
-    color: var(--primary-blue);
-    border: 2px solid var(--primary-blue);
+    color: var(--white);
+    border: 2px solid var(--white);
 }
 
 .btn-secondary:hover {
-    background: var(--primary-blue);
-    color: var(--white);
+    background: var(--white);
+    color: var(--primary-blue);
 }
 
 .btn-secondary:active {
-    border-color: var(--primary-blue);
-    background: var(--primary-blue);
-    color: var(--white);
+    border-color: var(--white);
+    background: var(--white);
+    color: var(--primary-blue);
     transform: translateY(-1px);
     box-shadow: none;
 }
@@ -1181,8 +1181,8 @@ body {
 
 .cta {
     padding: var(--spacing-xl) 0;
-    background: var(--white);
-    color: var(--dark-text);
+    background: var(--gradient-hero);
+    color: var(--white);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -1207,14 +1207,14 @@ body {
 .cta h2 {
     font-size: 2.5rem;
     margin-bottom: var(--spacing-sm);
-    color: var(--dark-text);
+    color: var(--white);
 }
 
 .cta p {
     font-size: 1.2rem;
     margin-bottom: var(--spacing-md);
     opacity: 0.92;
-    color: var(--light-text);
+    color: var(--sand);
 }
 
 .cta-buttons {
@@ -1236,13 +1236,13 @@ body {
 }
 
 .cta .btn-secondary {
-    border-color: var(--primary-blue);
-    color: var(--primary-blue);
+    border-color: var(--white);
+    color: var(--white);
 }
 
 .cta .btn-secondary:hover {
-    background: var(--primary-blue);
-    color: var(--white);
+    background: var(--white);
+    color: var(--primary-blue);
 }
 
 /* Contact Section */
