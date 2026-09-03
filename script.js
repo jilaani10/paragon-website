@@ -991,5 +991,5 @@ function getElementSelector(element) {
         void img.offsetWidth; // restart animation
         img.src = images[index];
         img.style.animation = 'slideFromRight 0.8s ease';
-    }, 30000);
+    }, 5000);
 })();
