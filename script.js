@@ -956,19 +956,28 @@ function getElementSelector(element) {
     if (!img) return;
 
     const images = [
-        'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80',
-        'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1200&q=80'
+        'images/IMG-20260902-WA0000.jpg',
+        'images/IMG-20260902-WA0001.jpg',
+        'images/IMG-20260902-WA0002.jpg',
+        'images/IMG-20260902-WA0003.jpg',
+        'images/IMG-20260902-WA0004.jpg',
+        'images/IMG-20260902-WA0005.jpg',
+        'images/IMG-20260902-WA0006.jpg',
+        'images/IMG-20260902-WA0007.jpg',
+        'images/IMG-20260902-WA0008.jpg',
+        'images/IMG-20260902-WA0009.jpg',
+        'images/IMG-20260902-WA0010.jpg',
+        'images/IMG-20260902-WA0011.jpg',
+        'images/IMG-20260902-WA0012.jpg',
+        'images/IMG-20260902-WA0013.jpg',
+        'images/IMG-20260902-WA0014.jpg',
+        'images/IMG-20260902-WA0015.jpg',
+        'images/IMG-20260902-WA0016.jpg',
+        'images/IMG-20260902-WA0017.jpg',
+        'images/IMG-20260902-WA0018.jpg',
+        'images/IMG-20260902-WA0019.jpg',
+        'images/IMG-20260902-WA0020.jpg',
+        'images/IMG-20260902-WA0021.jpg'
     ];
 
     let index = 0;
@@ -982,5 +991,5 @@ function getElementSelector(element) {
         void img.offsetWidth; // restart animation
         img.src = images[index];
         img.style.animation = 'slideFromRight 0.8s ease';
-    }, 40000);
+    }, 30000);
 })();
