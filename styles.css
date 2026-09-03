@@ -1763,6 +1763,7 @@ body {
         justify-content: center;
         flex-direction: column;
         gap: var(--spacing-xs);
+        align-items: center;
     }
     
     .btn {
@@ -1881,6 +1882,7 @@ body {
     .hero-buttons {
         flex-direction: column;
         gap: var(--spacing-xs);
+        align-items: center;
     }
     
     .btn {
@@ -1972,6 +1974,7 @@ body {
     .cta-buttons {
         flex-direction: column;
         gap: var(--spacing-xs);
+        align-items: center;
     }
     
     .footer-section h3 {
