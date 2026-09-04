@@ -2252,4 +2252,36 @@ body {
 
 }
 
+/* ==================== PHONES ONLY: CENTER NAV + SMALL CTA BUTTONS ====================
+   On phones (max-width 767px) only:
+   1. Re-center the nav menu links (the LTR block above left-aligns them).
+   2. Make the CTA buttons (Contact Us / Access School Info Hub) the same compact
+      size as the hero buttons (Latest News / Upcoming Events). */
+
+@media (max-width: 767px) {
+
+    .nav-menu {
+        text-align: center !important;
+        align-items: center;
+    }
+
+    .nav-menu li {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-menu a {
+        justify-content: center;
+        text-align: center !important;
+        margin: 0 auto;
+    }
+
+    .cta-buttons .btn {
+        padding: 10px 24px;
+        font-size: 0.95rem;
+    }
+
+}
+
 /* High DPI Displays (Retina) Optimization */
