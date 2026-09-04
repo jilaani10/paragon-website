@@ -853,7 +853,8 @@ body {
     background: #000;
 }
 
-.location-video video {
+.location-video video,
+.location-video img {
     display: block;
     width: 100%;
     height: auto;
@@ -869,7 +870,8 @@ body {
         margin-bottom: var(--spacing-md);
     }
 
-    .location-video video {
+    .location-video video,
+    .location-video img {
         aspect-ratio: 4 / 3;
     }
 }
@@ -2219,6 +2221,15 @@ body {
     aspect-ratio: 16 / 9;
     object-fit: cover;
     object-position: center;
+}
+
+.hero-image video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    background: #000;
 }
 
 .hero-image {
