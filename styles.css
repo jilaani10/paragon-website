@@ -2193,4 +2193,58 @@ body {
     width: 100%;
 }
 
+/* ==================== GLOBAL LTR + LEFT ALIGNMENT ====================
+   Forces all English text to flow left-to-right and sit left-aligned on
+   EVERY screen size (phones, tablets, PCs, TVs). This block sits last so
+   it overrides all earlier centered text rules and responsive breakpoints.
+   The Arabic school name (.school-name-arabic) is exempted and stays RTL. */
+
+html,
+body {
+    direction: ltr;
+    unicode-bidi: normal;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+a,
+span,
+strong,
+em,
+div,
+address,
+blockquote,
+figcaption,
+dd,
+dt,
+label,
+legend,
+cite,
+th,
+td,
+caption,
+form,
+button,
+input,
+select,
+textarea {
+    text-align: left !important;
+    direction: ltr !important;
+    unicode-bidi: isolate;
+}
+
+/* Keep the Arabic school name right-to-left — it is Arabic, not English. */
+.school-name-arabic {
+    direction: rtl !important;
+    unicode-bidi: embed !important;
+    text-align: center !important;
+}
+
 /* High DPI Displays (Retina) Optimization */
