@@ -2225,21 +2225,19 @@ body {
     width: 100%;
 }
 
-/* ==================== PHONES ONLY: LTR + LEFT ALIGNMENT ====================
-   On SMALL SCREENS ONLY (phones, max-width 767px), force all English text to
-   flow left-to-right and sit left-aligned. This block sits last so it wins over
-   earlier centered-text rules at these sizes. On big screens (PC, tablets,
-   768px+) the default centered layout is left untouched.
-   The Arabic school name (.school-name-arabic) is exempted and stays RTL. */
+/* ==================== PHONES ONLY: TEXT ALIGNMENT HIERARCHY ====================
+   On phones (max-width 767px) only — English stays LEFT-TO-RIGHT (LTR).
+   Professional typography system:
+   - Page/section/hero headings stay CENTERED.
+   - Short subtitles directly under a heading stay CENTERED.
+   - Longer body text, paragraphs and lists become LEFT-ALIGNED.
+   - Buttons stay centered; footer stays centered; Arabic name stays RTL.
+   Desktop and tablet layouts are NOT changed. */
 
 @media (max-width: 767px) {
 
+    /* LTR everywhere — English content is never RTL */
     html,
-    body {
-        direction: ltr;
-        unicode-bidi: normal;
-    }
-
     body,
     p,
     h1,
@@ -2266,13 +2264,63 @@ body {
     td,
     caption,
     form,
-    button,
-    input,
-    select,
-    textarea {
+    button {
+        direction: ltr;
+        unicode-bidi: normal;
+    }
+
+    /* HEADINGS (page, section, hero) stay centered */
+    h1,
+    h2 {
+        text-align: center !important;
+    }
+
+    /* SHORT SUBTITLES directly under a heading stay centered */
+    .hero-content > p:has(+ p),
+    h2 + p {
+        text-align: center !important;
+    }
+
+    /* BODY TEXT, PARAGRAPHS & LISTS: left-aligned */
+    p,
+    li,
+    dd,
+    dt,
+    address,
+    blockquote,
+    figcaption,
+    label,
+    legend,
+    cite,
+    th,
+    td,
+    caption {
         text-align: left !important;
-        direction: ltr !important;
-        unicode-bidi: isolate;
+    }
+
+    /* FOOTER: centered */
+    .footer,
+    .footer .footer-section,
+    .footer .footer-section h3,
+    .footer .footer-section p,
+    .footer .footer-section ul,
+    .footer .footer-section li,
+    .footer .footer-section a,
+    .footer-bottom,
+    .footer-bottom p {
+        text-align: center !important;
+    }
+
+    /* BUTTONS stay centered */
+    .hero-buttons,
+    .cta-buttons {
+        justify-content: center;
+    }
+
+    /* Readable side padding so body text never touches the phone edges */
+    .container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
     }
 
     /* Keep the Arabic school name right-to-left — it is Arabic, not English. */
