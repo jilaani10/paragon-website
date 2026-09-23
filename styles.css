@@ -967,6 +967,19 @@ body {
     color: var(--dark-text);
 }
 
+.bece-result-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--sand-dark);
+}
+
 .bece-results-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
