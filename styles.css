@@ -2402,37 +2402,18 @@ body {
 
 }
 
-/* ==================== BECE STACKED CARDS (one on top, one at bottom) ==================== */
-
-.bece-result-card.bece-stacked {
-    display: block;
-    margin-bottom: 2rem;
-}
-
-.bece-result-card.bece-stacked:last-of-type {
-    margin-bottom: 0;
-}
-
-.bece-result-card.bece-stacked .bece-result-img {
-    height: auto;
-}
-
-/* ==================== PHONES ONLY: BECE RESULTS SQUARE CARDS ====================
-   Square picture cards that hug the image - no empty white space above. */
+/* ==================== PHONES ONLY: BECE + CALENDAR CARDS ====================
+   Square-fit cards that hug the image - no empty white space above. */
 
 @media (max-width: 767px) {
-    .bece-result-card.bece-stacked {
-        padding: 0.6rem;
-        margin-bottom: 1.25rem;
+    #preview .bece-result-card,
+    #academic-calendar .bece-result-card {
+        padding: 0.6rem !important;
+        margin-bottom: 1.25rem !important;
     }
-    .bece-result-card.bece-stacked .bece-result-item {
-        box-shadow: none;
-        line-height: 0;
-    }
-    .bece-result-card.bece-stacked .bece-result-img {
-        height: auto !important;
-        aspect-ratio: 1 / 1;
-        object-fit: cover !important;
+    #preview .bece-result-card:last-of-type,
+    #academic-calendar .bece-result-card:last-of-type {
+        margin-bottom: 0 !important;
     }
 }
 
