@@ -2402,20 +2402,34 @@ body {
 
 }
 
+/* ==================== BECE STACKED CARDS (one on top, one at bottom) ==================== */
+
+.bece-result-card.bece-stacked {
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.bece-result-card.bece-stacked:last-of-type {
+    margin-bottom: 0;
+}
+
+.bece-result-card.bece-stacked .bece-result-img {
+    height: auto;
+}
+
 /* ==================== PHONES ONLY: BECE RESULTS SQUARE CARDS ====================
    Square picture cards that hug the image - no empty white space above. */
 
 @media (max-width: 767px) {
-    .bece-result-card {
-        grid-template-columns: 1fr 1fr;
-        gap: 0.6rem;
+    .bece-result-card.bece-stacked {
         padding: 0.6rem;
+        margin-bottom: 1.25rem;
     }
-    .bece-result-item {
+    .bece-result-card.bece-stacked .bece-result-item {
         box-shadow: none;
         line-height: 0;
     }
-    .bece-result-img {
+    .bece-result-card.bece-stacked .bece-result-img {
         height: auto !important;
         aspect-ratio: 1 / 1;
         object-fit: cover !important;
