@@ -2402,4 +2402,24 @@ body {
 
 }
 
+/* ==================== PHONES ONLY: BECE RESULTS SQUARE CARDS ====================
+   Square picture cards that hug the image - no empty white space above. */
+
+@media (max-width: 767px) {
+    .bece-result-card {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.6rem;
+        padding: 0.6rem;
+    }
+    .bece-result-item {
+        box-shadow: none;
+        line-height: 0;
+    }
+    .bece-result-img {
+        height: auto !important;
+        aspect-ratio: 1 / 1;
+        object-fit: cover !important;
+    }
+}
+
 /* High DPI Displays (Retina) Optimization */
